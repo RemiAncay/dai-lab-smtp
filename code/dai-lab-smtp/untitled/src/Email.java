@@ -11,5 +11,19 @@ public class Email {
         this.message = message;
     }
 
+    public String getMessage() {
+        return message;
+    }
 
+    public String getRecipients() {
+        return recipients;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
 }
