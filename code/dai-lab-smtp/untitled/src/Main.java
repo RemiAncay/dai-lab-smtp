@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        EmailBuilder builder = new EmailBuilder("prankster-resources/victims.txt", "prankster-resources/messages.txt");
+
+        var mails = builder.buildEmails(50);
     }
 }

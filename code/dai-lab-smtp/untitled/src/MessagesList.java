@@ -36,7 +36,7 @@ public class MessagesList {
 
     public String chooseRandomMessage() {
         if(messages.isEmpty())
-            return DEFAULT_MESSAGE;
+            throw new RuntimeException("No messages to choose from");
 
         Random rand = new Random();
         int randomIndex = rand.nextInt(messages.size());
