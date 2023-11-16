@@ -1,10 +1,10 @@
 public class Email {
     private String sender;
-    private String recipients;
+    private String[] recipients;
     private String subject;
     private String message;
 
-    public Email(String sender, String recipients, String subject, String message) {
+    public Email(String sender, String[] recipients, String subject, String message) {
         this.sender = sender;
         this.recipients = recipients;
         this.subject = subject;
@@ -15,7 +15,7 @@ public class Email {
         return message;
     }
 
-    public String getRecipients() {
+    public String[] getRecipients() {
         return recipients;
     }
 

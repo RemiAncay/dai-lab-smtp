@@ -12,7 +12,7 @@ public class Main {
             messagesPath = args[1];
             groupsCount = Integer.parseInt(args[2]);
         } catch (Exception e) {
-            throw new RuntimeException("Arguments doesn't have the correct format");
+            throw new RuntimeException("Arguments do not have the correct format");
         }
 
         if (groupsCount < 0)
