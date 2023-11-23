@@ -1,3 +1,5 @@
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
         String victimsPath, messagesPath;
@@ -19,7 +21,7 @@ public class Main {
             throw new RuntimeException("Invalid number of groups");
 
         //Create the prankster
-        PranksterProgram prankster = new PranksterProgram(victimsPath, messagesPath, groupsCount);
-        prankster.runOnce();
+        PranksterProgram prankster = new PranksterProgram(victimsPath, messagesPath);
+        prankster.runOnce(groupsCount);
     }
 }

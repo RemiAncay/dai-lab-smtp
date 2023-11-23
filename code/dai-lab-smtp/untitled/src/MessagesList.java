@@ -1,3 +1,8 @@
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -7,12 +12,13 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class MessagesList {
     private static final String MESSAGES_SEPARATOR = ";";
     private static final String DEFAULT_MESSAGE = "Default message :(";
 
     private final String path;
-    private ArrayList<String> messages;
+    private ArrayList<JSONMessage> messages;
     public MessagesList(String messagesPath) {
         messages = new ArrayList<>();
         this.path = messagesPath;
@@ -25,16 +31,17 @@ public class MessagesList {
             data = Files.readString(Path.of(path));
         }
         catch(IOException e) {
+            System.out.println("Messages list could not be read.");
             return;
         }
 
-        var tokens = data.split(MESSAGES_SEPARATOR);
-        for(var tok : tokens)
-            if(!tok.isEmpty())
-                messages.add(tok);
+        var jsonMessages = new Gson().fromJson(data, JSONMessages.class);
+
+        for(var msg : jsonMessages.messages)
+            messages.add(msg);
     }
 
-    public String chooseRandomMessage() {
+    public JSONMessage chooseRandomMessage() {
         if(messages.isEmpty())
             throw new RuntimeException("No messages to choose from");
 

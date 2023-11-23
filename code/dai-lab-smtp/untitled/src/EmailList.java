@@ -25,6 +25,7 @@ public class EmailList {
             }
         }
         catch(IOException e) {
+            System.out.println("Email list could not be read.");
             return;
         }
     }

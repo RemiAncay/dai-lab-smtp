@@ -29,7 +29,7 @@ public class EmailBuilder {
 
             var message = messagesList.chooseRandomMessage();
 
-            Email mail = new Email(sender, recipients.toArray(new String[0]), "todo", message);
+            Email mail = new Email(sender, recipients.toArray(new String[0]), message.subject, message.body);
             mails.add(mail);
         }
         return mails;

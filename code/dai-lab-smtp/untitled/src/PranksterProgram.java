@@ -1,15 +1,17 @@
 public class PranksterProgram {
-    public PranksterProgram(String victimsPath, String messagesPath, int groupsCount) {
-        //emailBuilder = new EmailBuilder(victimsPath, messagesPath, groupsCount);
+
+
+    public PranksterProgram(String victimsPath, String messagesPath) {
+        emailBuilder = new EmailBuilder(victimsPath, messagesPath);
         requestBuilder = new RequestBuilder();
         smtpClient = new SMTPClient();
     }
 
-    public void runOnce(){
-        //Email[] emails = emailBuilder.buildEmails();
+    public void runOnce(int groupsCount){
+        var emails = emailBuilder.buildEmails(groupsCount);
 
-        Email emailTest = new Email("titeuf.leBoss@heig-vd.ch", new String[] {"nadia.princesse@heig-vd.ch", "manu.leBro@heig-vd.ch"},"Fete chez Hugo", "Viens ça va être tro bi1 !");
-        smtpClient.sendSMTPRequest(requestBuilder.buildSMTPRequest(emailTest));
+        for(var mail : emails)
+            smtpClient.sendSMTPRequest(requestBuilder.buildSMTPRequest(mail));
     }
 
     private EmailBuilder emailBuilder;
