@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Random;
@@ -16,7 +17,7 @@ public class EmailList {
     }
 
     private void loadAddresses() {
-        try(var reader = new FileReader(path);
+        try(var reader = new FileReader(path, StandardCharsets.UTF_8);
             var bufferedReader = new BufferedReader(reader))
         {
             String line;

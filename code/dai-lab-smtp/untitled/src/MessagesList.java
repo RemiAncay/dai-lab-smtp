@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class MessagesList {
     private void loadMessageList() {
         String data;
         try {
-            data = Files.readString(Path.of(path));
+            data = Files.readString(Path.of(path), StandardCharsets.UTF_8);
         }
         catch(IOException e) {
             System.out.println("Messages list could not be read.");

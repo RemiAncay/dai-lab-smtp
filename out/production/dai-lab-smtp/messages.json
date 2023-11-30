@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "subject": "Réunion d'équipe",
+      "body": "Chers collègues,\n\nNous aurons une réunion d'équipe demain à 10h dans la salle de conférence. Assurez-vous d'être présents.\n\nCordialement,\n[Votre Nom]"
+    },
+    {
+      "subject": "Offre exclusive",
+      "body": "Félicitations ! Vous avez été sélectionné pour bénéficier d'une offre exclusive. Ne manquez pas cette chance unique d'économiser gros sur nos produits de qualité supérieure. Cliquez ici pour plus d'informations."
+    },
+    {
+      "subject": "Gagnez un million de dollars !",
+      "body": "Vous avez gagné un million de dollars ! Réclamez votre prix en fournissant vos informations personnelles. C'est une opportunité en or que vous ne pouvez pas laisser passer. Ne ratez pas cette chance de devenir riche instantanément !"
+    },
+    {
+      "subject": "Prêt approuvé",
+      "body": "Félicitations, votre prêt a été approuvé ! Peu importe votre historique de crédit, nous avons une offre de prêt pour vous. Obtenez de l'argent rapidement et facilement. Cliquez ici pour accepter votre prêt maintenant."
+    },
+    {
+      "subject": "Perdez du poids rapidement !",
+      "body": "Découvrez le secret pour perdre du poids rapidement et facilement. Aucun exercice requis ! Nos pilules miraculeuses vous aideront à atteindre la silhouette de vos rêves en un rien de temps. Commandez maintenant et obtenez une remise exclusive."
+    }
+  ]
+}

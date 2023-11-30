@@ -64,10 +64,6 @@ public class SMTPClient {
                 returnString = in.readLine();
                 System.out.println(returnString);
             }
-
-
-
-
         } catch (Exception e) {
             System.out.println("Client: exc.: " + e);
         }
