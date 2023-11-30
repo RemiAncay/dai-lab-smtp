@@ -8,13 +8,10 @@ public class EmailBuilder {
         var random = new Random();
         return random.nextInt(MIN_GROUP_SIZE_INCL, MAX_GROUP_SIZE_EXCL);
     }
-
-    private ArrayList<Email> mails;
-    private EmailList mailingList;
-    private MessagesList messagesList;
+    private final EmailList mailingList;
+    private final MessagesList messagesList;
 
     public EmailBuilder(String emailListPath, String messagesPath) {
-        mails = new ArrayList<>();
         mailingList = new EmailList(emailListPath);
         messagesList = new MessagesList(messagesPath);
     }

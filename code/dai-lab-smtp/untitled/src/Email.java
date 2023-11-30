@@ -1,8 +1,8 @@
 public class Email {
-    private String sender;
-    private String[] recipients;
-    private String subject;
-    private String message;
+    private final String sender;
+    private final String[] recipients;
+    private final String subject;
+    private final String message;
 
     public Email(String sender, String[] recipients, String subject, String message) {
         this.sender = sender;

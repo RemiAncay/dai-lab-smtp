@@ -1,5 +1,7 @@
 public class PranksterProgram {
-
+    private final EmailBuilder emailBuilder;
+    private final RequestBuilder requestBuilder;
+    private final SMTPClient smtpClient;
 
     public PranksterProgram(String victimsPath, String messagesPath) {
         emailBuilder = new EmailBuilder(victimsPath, messagesPath);
@@ -10,11 +12,10 @@ public class PranksterProgram {
     public void runOnce(int groupsCount){
         var emails = emailBuilder.buildEmails(groupsCount);
 
-        for(var mail : emails)
+        int count = 0;
+        for(var mail : emails) {
+            System.out.println("Email n° " + ++count + "/" + groupsCount);
             smtpClient.sendSMTPRequest(requestBuilder.buildSMTPRequest(mail));
+        }
     }
-
-    private EmailBuilder emailBuilder;
-    private RequestBuilder requestBuilder;
-    private SMTPClient smtpClient;
 }

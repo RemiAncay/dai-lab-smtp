@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class EmailList {
-    ArrayList<String> addresses;
-    String path;
+    private final ArrayList<String> addresses;
+    private final String path;
 
     public EmailList(String emailListPath) {
         addresses = new ArrayList<>();

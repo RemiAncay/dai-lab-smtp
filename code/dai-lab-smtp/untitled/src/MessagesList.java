@@ -1,5 +1,4 @@
 import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -9,11 +8,9 @@ import java.util.Random;
 
 
 public class MessagesList {
-    private static final String MESSAGES_SEPARATOR = ";";
-    private static final String DEFAULT_MESSAGE = "Default message :(";
 
     private final String path;
-    private ArrayList<JSONMessage> messages;
+    private final ArrayList<JSONMessage> messages;
     public MessagesList(String messagesPath) {
         messages = new ArrayList<>();
         this.path = messagesPath;
