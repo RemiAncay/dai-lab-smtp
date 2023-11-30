@@ -1,3 +1,3 @@
-public class JSONMessages {
+public class JSONMessageArray {
     public JSONMessage[] messages;
 }

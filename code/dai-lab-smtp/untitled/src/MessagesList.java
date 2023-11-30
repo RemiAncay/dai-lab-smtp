@@ -1,11 +1,5 @@
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -36,7 +30,7 @@ public class MessagesList {
             return;
         }
 
-        var jsonMessages = new Gson().fromJson(data, JSONMessages.class);
+        var jsonMessages = new Gson().fromJson(data, JSONMessageArray.class);
 
         for(var msg : jsonMessages.messages)
             messages.add(msg);
